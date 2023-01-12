@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -41,6 +42,14 @@ public class CategoryAdapter extends BaseAdapter {
             myView = view;
         }
 
+        TextView catName = myView.findViewById(R.id.catName);
+        TextView noOfTests = myView.findViewById(R.id.no_of_Tests);        /* This code is part of a custom adapter class for a ListView. It takes care of creating and binding the data for each item in the list.
+
+                                                                                    It checks if a view already exists for an item, if it does it reuses it, otherwise it creates a new view by inflating a layout file. Then it sets the text for the views with information from a list of objects, called cat_List and returns the updated view.*/
+        catName.setText(cat_List.get(i).getName());
+        noOfTests.setText(String.valueOf(cat_List.get(i).getNoOfTests()));
         return myView;
+
+
     }
 }

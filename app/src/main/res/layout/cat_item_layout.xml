@@ -25,6 +25,7 @@
                 android:layout_height="wrap_content"
                 android:text="Cat Name"
                 android:textSize="18sp"
+                android:fontFamily="@font/skranji"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:gravity="center" />
@@ -34,6 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="25 Tests"
+                android:fontFamily="@font/skranji"
                 android:layout_marginTop="8dp"
                 android:textColor="@color/primary_color"
                 android:textAlignment="center"

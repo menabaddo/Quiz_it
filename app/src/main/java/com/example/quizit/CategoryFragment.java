@@ -11,6 +11,7 @@ import android.widget.GridView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -72,7 +73,22 @@ public class CategoryFragment extends Fragment {
 
         catView = view.findViewById(R.id.cat_Grid);
 
+        loadCategories();
+
+        CategoryAdapter adapter = new CategoryAdapter(catList);
+        catView.setAdapter(adapter);
+
 
         return  view;
+    }
+
+    private void loadCategories(){
+        catList.clear();
+        catList.add(new CategoryModel("1", "MATHS", 20));
+        catList.add(new CategoryModel("2", "FOOD", 30));
+        catList.add(new CategoryModel("3", "ENGLISH", 10));
+        catList.add(new CategoryModel("4", "SCIENCE", 25));
+        catList.add(new CategoryModel("5", "MATHS", 20));
+
     }
 }
