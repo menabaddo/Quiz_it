@@ -6,7 +6,7 @@ import android.widget.FrameLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
-
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -16,6 +16,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.Group;
 
 import com.example.quizit.databinding.ActivityMainBinding;
 
@@ -37,13 +38,15 @@ public class MainActivity extends AppCompatActivity {
 
                     switch (item.getItemId()){
                         case R.id.nav_home:
-
+                            setFragement(new CategoryFragment());
                             return true;
 
                         case R.id.nav_leaderboard:
+                            setFragement(new LeaderBoardFragment());
                             return true;
 
                         case R.id.nav_account:
+                            setFragement(new AccountFragment());
                             return true;
 
                     }
@@ -59,25 +62,20 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        bottomNavigationView = findViewById(R.id.bottom_nav_bar);
+        main_frame = findViewById(R.id.main_frame);
+
 
         bottomNavigationView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
 
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
 
-        bottomNavigationView = findViewById(R.id.bottom_nav_bar);
-        main_frame = findViewById(R.id.main_frame);
 
 
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
-                .setDrawerLayout(drawer)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
+
+
+
 
         setFragement(new CategoryFragment());
     }
