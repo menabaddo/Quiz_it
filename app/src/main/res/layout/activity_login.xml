@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/LoginTheme"
     tools:context=".LoginActivity">
 
     <LinearLayout
@@ -22,13 +23,14 @@
         <ImageView
             android:layout_width="150dp"
             android:layout_height="120dp"
-            android:src="@drawable/logoWhite" />
+            android:src="@drawable/logo_white" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="-20dp"
             android:text="@string/app_name"
+            android:fontFamily="@font/skranji"
             android:textColor="@color/white"
             android:textSize="32sp"
 
@@ -132,7 +134,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="46dp"
         android:text="SIGN UP"
         android:textColor="@color/primary_color"
         android:textSize="18sp"
