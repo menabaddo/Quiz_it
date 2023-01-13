@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/LoginTheme"
+    tools:context=".SignUpActivity">
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:elevation="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:src="@drawable/logo_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:fontFamily="@font/skranji"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:drawableTint="@color/primary_color"
+            android:backgroundTint="@color/primary_color"
+            android:textColor="@color/black"
+            android:hint="Full Name"
+            android:ems="10"
+            android:inputType="text"
+            />
+        <EditText
+            android:id="@+id/emailID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:drawableTint="@color/primary_color"
+            android:backgroundTint="@color/primary_color"
+            android:textColor="@color/black"
+            android:hint="E-mail"
+            android:ems="10"
+            android:inputType="text"
+            />
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:drawableTint="@color/primary_color"
+            android:backgroundTint="@color/primary_color"
+            android:textColor="@color/black"
+            android:hint="Password"
+            android:ems="10"
+            android:inputType="textPassword"
+            />
+        <EditText
+            android:id="@+id/confirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:drawableTint="@color/primary_color"
+            android:backgroundTint="@color/primary_color"
+            android:textColor="@color/black"
+            android:hint="Confirm Password"
+            android:ems="10"
+            android:inputType="textPassword"
+            />
+
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/signUpB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/skranji"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="SIGN UP"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:elevation="5dp"
+        android:translationZ="3dp"
+        android:stateListAnimator="@null"
+        android:background="@drawable/round_corner_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_layout" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
