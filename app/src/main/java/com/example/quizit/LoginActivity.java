@@ -2,6 +2,7 @@ package com.example.quizit;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -32,6 +33,15 @@ public class LoginActivity extends AppCompatActivity {
                 if(validateData()){
                     login();
                 }
+            }
+        });
+
+
+        signupB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+                startActivity(intent);
             }
         });
 
