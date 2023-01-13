@@ -3,6 +3,7 @@ package com.example.quizit;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -23,6 +24,37 @@ public class LoginActivity extends AppCompatActivity {
         loginB = findViewById(R.id.loginButton);
         forgotPassB = findViewById(R.id.forgot_pass);
         signupB = findViewById(R.id.signupButton);
+
+        loginB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(validateData()){
+                    login();
+                }
+            }
+        });
+
+    }
+
+    private boolean validateData(){
+        boolean staus = false;
+
+        if(email.getText().toString().isEmpty()){
+
+            email.setError("Enter E-Mail ID");
+            return  false;
+        }
+
+
+        if(pass.getText().toString().isEmpty()){
+            pass.setError("Enter Password");
+            return  false;
+        }
+        return true;
+    }
+
+    private  void login(){
 
     }
 }
