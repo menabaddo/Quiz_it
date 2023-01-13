@@ -47,7 +47,7 @@ public class CategoryAdapter extends BaseAdapter {
 
                                                                                     It checks if a view already exists for an item, if it does it reuses it, otherwise it creates a new view by inflating a layout file. Then it sets the text for the views with information from a list of objects, called cat_List and returns the updated view.*/
         catName.setText(cat_List.get(i).getName());
-        noOfTests.setText(String.valueOf(cat_List.get(i).getNoOfTests()));
+        noOfTests.setText(String.valueOf(cat_List.get(i).getNoOfTests()) + " Tests");
         return myView;
 
 
