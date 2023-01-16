@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.setCancelable(false);
         progressDialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
-        dialogText = progressDialog.findViewById(R.id.dialogText);
+        dialogText = progressDialog.findViewById(R.id.dialogText2);
         dialogText.setText("Signing in");
 
 

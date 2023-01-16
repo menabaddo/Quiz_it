@@ -3,6 +3,7 @@ package com.example.quizit;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,6 +33,7 @@ public class SignUpActivity extends AppCompatActivity {
     private TextView dialogText;
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +52,7 @@ public class SignUpActivity extends AppCompatActivity {
         progressDialog.setCancelable(false);
         progressDialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
-        dialogText = findViewById(R.id.dialogText);
+        dialogText = progressDialog.findViewById(R.id.dialogText2);
         dialogText.setText("Registering User...");
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
