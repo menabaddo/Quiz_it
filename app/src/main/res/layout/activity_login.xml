@@ -147,42 +147,50 @@
 
     <RelativeLayout
         android:id="@+id/g_signB"
-        android:layout_width="0dp"
+        android:layout_width="323dp"
         android:layout_height="40dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginEnd="64dp"
-        android:gravity="center_vertical"
         android:layout_marginBottom="64dp"
         android:background="@color/primary_color"
+        android:gravity="center_vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
 
-    >
+        >
 
         <ImageView
-            android:layout_width="50dp"
             android:id="@+id/g_img"
+            android:layout_width="50dp"
             android:layout_height="match_parent"
-            android:src="@drawable/googleSignIn"
+            android:layout_margin="4dp"
             android:background="@color/white"
             android:padding="4dp"
-            android:layout_margin="4dp"
+            android:src="@drawable/googlesignin"
 
 
             />
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sign In with Google"
-            android:textColor="@color/white"
-            android:layout_marginLeft="24dp"
+            android:layout_width="200dp"
+            android:layout_height="27dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="6dp"
+            android:layout_toEndOf="@+id/g_img"
+            android:layout_toRightOf="@+id/g_img"
             android:fontFamily="@font/skranji"
             android:gravity="center"
-            android:textSize="20sp"
-            android:layout_marginTop="5dp"
-            android:layout_toEndOf="@+id/g_img"
-            android:layout_toRightOf="@+id/g_img" />
+            android:text="Sign In with Google"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
 
     </RelativeLayout>
