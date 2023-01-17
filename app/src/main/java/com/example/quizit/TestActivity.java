@@ -34,7 +34,7 @@ public class TestActivity extends AppCompatActivity {
        setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
 
-        int cat_index = getIntent().getIntExtra("CAT INDEX", 0);
+        int cat_index = getIntent().getIntExtra("CAT_INDEX", 0);
 
         getSupportActionBar().setTitle(CategoryFragment.catList.get(cat_index).getName());
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
