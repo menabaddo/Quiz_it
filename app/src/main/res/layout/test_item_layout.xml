@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/testNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="27dp"
+        tools:ignore="MissingConstraints"
+        android:gravity="center_horizontal" />
+
+    <ProgressBar
+        android:id="@+id/testProgressBar"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:backgroundTint="@color/primary_color"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="83dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/scoretext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="80%"
+        android:textColor="@color/primary_color"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="123dp"
+        tools:ignore="MissingConstraints"
+        android:gravity="center_horizontal" />
+</androidx.constraintlayout.widget.ConstraintLayout>
