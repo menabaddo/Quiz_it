@@ -1,11 +1,14 @@
 package com.example.quizit;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.widget.Toolbar;
+import android.view.MenuItem;
+
+import androidx.appcompat.widget.Toolbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +31,7 @@ public class TestActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
 
 
-        setSupportActionBar (toolbar);
+       setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
 
         int cat_index = getIntent().getIntExtra("CAT INDEX", 0);
@@ -44,6 +47,9 @@ public class TestActivity extends AppCompatActivity {
 
         loadTestData();
 
+        TestAdapter adapter = new TestAdapter(testList);
+        testView.setAdapter(adapter);
+
 
 
     }
@@ -57,5 +63,15 @@ public class TestActivity extends AppCompatActivity {
         testList.add(new TestModel("3", 0, 20));
         testList.add(new TestModel("4", 10, 40));
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId() == android.R.id.home){
+            TestActivity.this.finish();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

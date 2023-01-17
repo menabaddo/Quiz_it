@@ -88,7 +88,7 @@ public class CategoryFragment extends Fragment {
         catList.add(new CategoryModel("2", "FOOD", 30));
         catList.add(new CategoryModel("3", "ENGLISH", 10));
         catList.add(new CategoryModel("4", "SCIENCE", 25));
-        catList.add(new CategoryModel("5", "MATHS", 20));
+
 
     }
 }

@@ -1,5 +1,6 @@
 package com.example.quizit;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,6 +43,14 @@ public class CategoryAdapter extends BaseAdapter {
             myView = view;
         }
 
+        myView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), TestActivity.class);
+                intent.putExtra("CAT_INDEX", i);
+                view.getContext().startActivity(intent);
+            }
+        });
         TextView catName = myView.findViewById(R.id.catName);
         TextView noOfTests = myView.findViewById(R.id.no_of_Tests);        /* This code is part of a custom adapter class for a ListView. It takes care of creating and binding the data for each item in the list.
 
